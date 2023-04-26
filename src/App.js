@@ -4,6 +4,7 @@ import "./App.css";
 
 class App extends Component {
   constructor() {
+    console.log("1");
     super();
 
     this.state = {
@@ -12,6 +13,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+    console.log("3");
     fetch("http://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((users) =>
@@ -27,6 +29,7 @@ class App extends Component {
   }
 
   render() {
+    console.log("2");
     return (
       <div className="App">
         {this.state.monsters.map((monster) => {
